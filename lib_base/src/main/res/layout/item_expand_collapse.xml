@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/expandable_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/qmui_config_color_gray_3"
+        android:textIsSelectable="true"
+        android:textSize="@dimen/sp_14"
+        android:autoLink="phone|email|web"
+        tools:text="再把目光放到动漫里奔驰大叔的座驾奔驰E级，这台上世纪90年代的豪华房车代表，不仅拥有同级别里极为丰富的配置、豪华的内饰，同时也是…" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/expand_collapse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:drawablePadding="3dp"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/colorAccent"
+        tools:drawableRight="@mipmap/ic_action_up_white"
+        tools:text="@string/collapse" />
+
+</LinearLayout>

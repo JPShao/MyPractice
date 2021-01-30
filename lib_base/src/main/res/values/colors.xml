@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="app_theme_color">#0052FE</color>
+    <color name="colorPrimary">@color/app_theme_color</color>
+    <color name="colorPrimaryDark">@color/app_theme_color</color>
+    <color name="colorAccent">@color/app_theme_color</color>
+
+    <color name="white">#ffffff</color>
+    <color name="title_bg_color">#353550</color>
+    <color name="text_vip_color">#946506</color>
+    <color name="text_num_vip_color">#c5a462</color>
+
+    <color name="text_color_hint">#C8CDDA</color>
+    <color name="title_color">#202842</color>
+    <color name="form_title_color">#636D8C</color>
+    <color name="text_hint_color">#C1C6D5</color>
+    <color name="bar_title_color">#232E4B</color>
+    <color name="color_ffffff">#ffffff</color>
+    <color name="color_cccccc">#cccccc</color>
+    <color name="color_4d000000">#4d000000</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_0052FE">#0052FE</color>
+    <color name="color_007AFF">#007AFF</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_66000000">#66000000</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_f5f5f5">#f5f5f5</color>
+    <color name="color_f8fafb">#f8fafb</color>
+    <color name="color_ea5504">#ea5504</color>
+    <color name="color_e5edfe">#E5EDFE</color>
+    <color name="color_1d9f57">#1D9F57</color>
+    <color name="color_c07200">#c07200</color>
+    <color name="color_3cb371">#3cb371</color>
+    <color name="transparent">#00000000</color>
+    <color name="color_fe944a">#FE944A</color>
+    <color name="color_f74d6a">#F74D6A</color>
+    <color name="color_000000">#ff000000</color>
+    <color name="color_CCCCCCFF">#CCCCCCFF</color>
+
+    <color name="color_line_base">#ffeeeeee</color>
+    <color name="colorSmartRefreshBg">#f3f3f3</color>
+    
+    <color name="color_divider_FFF5F5F5">#FFF5F5F5</color>
+    <color name="color_app_background_FFF5F5F5">#FFF5F5F5</color>
+
+    <!--商城列表-->
+    <color name="lib_base_mall_entrust_service_color">#ff333333</color>
+    <color name="lib_base_mall_entrust_service_color2">#ff666666</color>
+    <color name="lib_base_mall_entrust_service_color3">#ff999999</color>
+    <color name="lib_base_mall_entrust_service_color4">#FFFE944A</color>
+    <color name="lib_base_mall_entrust_service_color5">#FFCCCCCC</color>
+
+    
+</resources>

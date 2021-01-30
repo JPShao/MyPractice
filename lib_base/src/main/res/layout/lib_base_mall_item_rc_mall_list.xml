@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/dp_12"
+    android:layout_marginLeft="@dimen/margin_edge"
+    android:layout_marginRight="@dimen/margin_edge"
+    android:paddingTop="@dimen/dp_12"
+    android:paddingBottom="@dimen/dp_16"
+    android:paddingLeft="@dimen/dp_12"
+    android:paddingRight="@dimen/dp_12"
+    android:background="@drawable/lib_base_mall_shape_mall_list_bg2">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/roundImageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="@dimen/dp_4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="319:179">
+    </com.makeramen.roundedimageview.RoundedImageView>
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="代办服务"
+        android:textSize="@dimen/sp15"
+        android:textColor="@color/lib_base_mall_entrust_service_color"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginTop="@dimen/dp_12"
+        app:layout_constraintTop_toBottomOf="@+id/roundImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    </TextView>
+
+    <TextView
+        android:id="@+id/textDescribe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="@dimen/sp12"
+        android:textColor="@color/lib_base_mall_entrust_service_color3"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:layout_marginTop="@dimen/dp_4"
+        app:layout_constraintTop_toBottomOf="@+id/textTitle">
+    </TextView>
+
+    <TextView
+        android:id="@+id/textVipMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/lib_base_mall_entrust_service_color4"
+        android:textSize="@dimen/sp20"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/textLook"
+        app:layout_constraintStart_toStartOf="parent">
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvSalesVolume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="@dimen/sp12"
+        android:textColor="@color/color_666666"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_2"
+        app:layout_constraintBottom_toBottomOf="@+id/textVipMoney"
+        app:layout_constraintStart_toEndOf="@+id/textVipMoney">
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/llMarket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textLook"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textPlatformMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="@dimen/sp12"
+                android:textColor="@color/lib_base_mall_entrust_service_color3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+            </TextView>
+            <View
+                android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/lib_base_mall_entrust_service_color3"
+                app:layout_constraintTop_toTopOf="@+id/textPlatformMoney"
+                app:layout_constraintBottom_toBottomOf="@+id/textPlatformMoney"
+                app:layout_constraintStart_toStartOf="@+id/textPlatformMoney"
+                app:layout_constraintEnd_toEndOf="@+id/textPlatformMoney">
+            </View>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:visibility="gone"
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="@dimen/dp_11"
+            android:layout_gravity="center_vertical"
+            android:background="@color/lib_base_mall_entrust_service_color3"
+            android:layout_marginLeft="@dimen/dp_4">
+        </View>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/textMarketMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_4"
+            android:text=""
+            android:textSize="@dimen/sp12"
+            android:textColor="@color/lib_base_mall_entrust_service_color4">
+        </TextView>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textLook"
+        android:layout_width="@dimen/dp_104"
+        android:layout_height="@dimen/dp_45"
+        android:gravity="center"
+        android:text="立即查看"
+        android:textSize="@dimen/sp14"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@drawable/lib_base_mall_shape_mall_list_bg1"
+        android:layout_marginTop="@dimen/dp_14"
+        app:layout_constraintTop_toBottomOf="@+id/textDescribe"
+        app:layout_constraintEnd_toEndOf="parent">
+    </TextView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

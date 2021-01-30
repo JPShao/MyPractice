@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">multiple-status-view</string>
+    <string name="function_loading">功能暂未开放!</string>
+    <string name="empty_view_hint">暂无数据</string>
+    <string name="error_view_hint">加载失败</string>
+    <string name="no_network_view_hint">网络异常</string>
+    <string name="expand">展开</string>
+    <string name="collapse">收缩</string>
+    <string name="offline_collect">线下采集</string>
+    <string name="add_collect">+ 新增采集</string>
+    <string name="rectification_search">整改通知书查询</string>
+
+    <string name="lib_base_service_tel">17760375078</string>  <!--客服电话-->
+    <string name="lib_base_payment_result_hint">30分钟内未支付，订单将被取消，请尽快支付哦</string>
+
+</resources>

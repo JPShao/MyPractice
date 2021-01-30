@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MultipleStatusView">
+        <attr name="loadingView" format="reference"/>
+        <attr name="errorView" format="reference"/>
+        <attr name="emptyView" format="reference"/>
+        <attr name="noNetworkView" format="reference"/>
+        <attr name="contentView" format="reference"/>
+    </declare-styleable>
+    <!-- 自定义折叠 TextView  -->
+    <declare-styleable name="ExpandableTextView">
+        <attr name="maxCollapsedLines" format="integer" />
+        <attr name="animDuration" format="integer" />
+        <attr name="animAlphaStart" format="float" />
+        <attr name="expandDrawable" format="reference" />
+        <attr name="collapseDrawable" format="reference" />
+    </declare-styleable>
+    <!-- loadingView-->
+    <declare-styleable name="LoadingView">
+        <!--  设置外面进度条的半径 -->
+        <attr name="outerCircleRadius" format="dimension|reference" />
+        <!--  设置外面进度条的颜色 -->
+        <attr name="outerCircleColor" format="color|reference" />
+        <!--  设置三角形外接圆的半径 -->
+        <attr name="innerTriangleRadius" format="dimension|reference" />
+        <!--  设置三角形颜色 -->
+        <attr name="innerTriangleColor" format="color|reference" />
+        <!--  设置背景的颜色 -->
+        <attr name="backgroundColor" format="color|reference" />
+        <!--  设置是否需要背景 -->
+        <attr name="isNeedBackground" format="boolean" />
+        <attr name="strokeWidth" format="dimension|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="MyTitleLayout">
+        <attr name="center_title" format="string"/>
+        <attr name="right_title" format="string"/>
+        <attr name="is_bold" format="boolean"/>
+        <attr name="colorBg" format="color"/>
+        <attr name="color_right_title" format="color"/>
+        <attr name="center_title_color" format="color"/>
+        <attr name="left_icon" format="reference"/>
+        <attr name="is_hide_back" format="boolean"/>
+    </declare-styleable>
+</resources>

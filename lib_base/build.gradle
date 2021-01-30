@@ -1,0 +1,157 @@
+apply from: '../module.build.gradle'
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+android {
+    compileSdkVersion build_versions.compile_sdk
+    buildToolsVersion build_versions.build_tools
+
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    kotlinOptions { jvmTarget = '1.8' }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    kapt deps.room.compiler
+    kapt deps.glide.compiler
+
+    api deps.glide.gpuimage
+    api deps.glide.transformations
+    api deps.constraint_layout
+    api deps.activity.activity_ktx
+    api deps.app_compat
+    api deps.fragment.runtime_ktx
+    api deps.recyclerview
+    api deps.cardview
+    api deps.material
+    api deps.room.runtime
+    api deps.room.ktx
+    api deps.lifecycle.extensions
+    api deps.lifecycle.livedata_ktx
+    api deps.lifecycle.runtime
+    api deps.paging_runtime
+    api deps.kotlin.stdlib
+    api deps.retrofit.runtime
+    api deps.retrofit.gson
+    api deps.okhttp_logging_interceptor
+    api deps.glide.runtime
+
+    api deps.qmui
+    api deps.adapter
+    api deps.timber
+    api deps.retrofit.runtime
+    api deps.retrofit.gson
+    api deps.retrofit.mock
+    api deps.retrofit.scalars
+    api deps.retrofit.adapter
+    api deps.rx.java
+    api deps.rx.android
+    api deps.rx.rxbinding
+    //lottie动画
+    api deps.view.lottie
+    // 刷新smartRefresh
+    api deps.view.refresh
+    api deps.view.refresh_header
+    api deps.view.refresh_footer
+    api deps.view.opions_picker
+    // banner
+    api deps.view.banner
+    //阿里云oss
+    api 'com.aliyun.dpa:oss-android-sdk:2.9.4'
+    //Anko
+    api "org.jetbrains.anko:anko:$anko_version"
+    api 'com.google.android.material:material:1.2.1'
+    //Google开源的一个布局控件
+    api 'com.google.android:flexbox:1.0.0'
+    //模糊透明 View
+    api 'com.github.mmin18:realtimeblurview:1.1.0'
+    //leakCanary
+    //debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.4'
+    //腾讯 bugly
+    //api 'com.tencent.bugly:crashreport:latest.release'
+    //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    //api 'com.tencent.bugly:nativecrashreport:latest.release'
+    //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+    // 友盟统计SDK
+    api 'com.umeng.umsdk:common:9.1.0' // (必选)
+    api 'com.umeng.umsdk:asms:1.1.3' // asms包依赖(必选)
+    api 'com.umeng.umsdk:crash:0.0.4' // native crash包依赖(必选)
+    api 'com.umeng.umsdk:oaid_lenovo:1.0.0'
+    api 'com.umeng.umsdk:oaid_mi:1.0.0'
+    api 'com.umeng.umsdk:oaid_oppo:1.0.4'
+    api 'com.umeng.umsdk:oaid_vivo:1.0.0.1'
+    //运行时权限
+    api 'pub.devrel:easypermissions:3.0.0'
+    api 'com.github.tbruyelle:rxpermissions:0.12'
+    //微信存储
+    api deps.mmkv
+    //EventBus
+    api 'org.greenrobot:eventbus:3.2.0'
+    //路由
+    implementation 'com.alibaba:arouter-api:1.5.0'
+    kapt 'com.alibaba:arouter-compiler:1.2.2'
+    kapt 'com.alibaba:arouter-annotation:1.0.6'
+    //下载框架
+    api 'com.liulishuo.filedownloader:library:1.7.7'
+    //弹窗
+    api 'com.lxj:xpopup:2.1.4'
+    //api "com.blankj:utilcode:1.24.2"  1.25.7 //存在风险A Variant Of Android/DataCollector.Utilcode.A Potentially Unsafe，华为应用市场审核不通过
+    api 'com.blankj:utilcodex:1.30.4'
+    api 'com.jakewharton.rxbinding4:rxbinding-material:4.0.0'
+    //可更改下划线的TabLayout
+    api 'com.androidkun:XTabLayout:1.1.5'
+    //圆角ImageView
+    api 'com.makeramen:roundedimageview:2.3.0'
+    //图片可缩放
+    api 'com.github.chrisbanes:PhotoView:2.3.0'
+    //图片压缩
+    api 'id.zelory:compressor:3.0.0'
+    //图片选择器
+    api 'com.github.LuckSiege.PictureSelector:picture_library:v2.6.0'
+    //流式布局
+    api 'com.hyman:flowlayout-lib:1.1.2'
+    //支付相关
+    api 'com.xgr.easypay:EasyPay:2.0.5'   // 基类库，必选
+    api 'com.xgr.easypay:wechatpay:2.0.5' // 微信支付，可选
+    api 'com.xgr.easypay:alipay:2.0.5'    // 支付宝支付，可选
+    //推送
+    api 'cn.jiguang.sdk:jpush:3.8.6'
+    api 'cn.jiguang.sdk:jcore:2.5.5'
+    // Android Testing Support Library's runner and rules
+    androidTestImplementation deps.atsl.core
+    androidTestImplementation deps.atsl.runner
+    androidTestImplementation deps.atsl.rules
+    androidTestImplementation deps.arch_core.testing
+
+    androidTestImplementation deps.junit
+    androidTestImplementation deps.retrofit.mock
+    androidTestImplementation deps.mockito.core
+    androidTestImplementation deps.mockito.android
+
+    testImplementation deps.junit
+    testImplementation deps.retrofit.mock
+    testImplementation deps.arch_core.testing
+    testImplementation deps.mockito.core
+}
